@@ -5,20 +5,21 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
-  /* Corpo da página fullscreen com imagem de fundo */
-  body {
+
+  .intro-page {
     height: 100vh;
     width: 100%;
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Ita%C3%BA_Unibanco_logo_2023.svg/1200px-Ita%C3%BA_Unibanco_logo_2023.svg.png') no-repeat center center/cover;
+    background: url('https://poderdaescuta.com/wp-content/uploads/2023/05/por-que-trabalhar-em-equipe-poder-da-escuta.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
   }
+  
 
-  /* Sobreposição escura para dar contraste */
-  body::before {
+
+  .intro-page::before {
     content: '';
     position: absolute;
     top: 0;
@@ -29,7 +30,6 @@
     z-index: 1;
   }
 
-  /* Container central */
   .intro-container {
     position: relative;
     z-index: 2;
@@ -39,26 +39,23 @@
     opacity: 0;
   }
 
-  /* Título da página */
   .intro-container h1 {
     font-size: 48px;
     margin-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
   }
 
-  /* Texto opcional */
   .intro-container p {
     font-size: 20px;
     margin-bottom: 40px;
     text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
   }
 
-  /* Botão de entrada */
   .enter-button {
     padding: 18px 50px;
     font-size: 22px;
     color: white;
-    background-color: #ff5722;
+    background-color: #0747cf;
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -68,18 +65,17 @@
   }
 
   .enter-button:hover {
-    background-color: #e64a19;
+    background-color: #063caf;
     transform: scale(1.05);
     box-shadow: 0 12px 20px rgba(0,0,0,0.4);
   }
 
-  /* Animação do container */
   @keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(50px); }
     100% { opacity: 1; transform: translateY(0); }
   }
 
-  /* Efeito sutil de partículas/flashes no fundo (opcional) */
+
   .background-animation {
     position: absolute;
     top: 0;
