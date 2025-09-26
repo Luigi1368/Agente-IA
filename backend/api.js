@@ -18,8 +18,8 @@ api.post('/respostas', (req, resp) => {
 
     respostas[userId].push(profissoes);
 
-    if (perguntaId < perguntas.length) {
-    const proximaPergunta = perguntas[perguntaId];
+    if (perguntaId < perguntas.length - 1) {
+    const proximaPergunta = perguntas[perguntaId + 1];
     resp.json({ tipo: "pergunta", conteudo: proximaPergunta });
     }
 
@@ -28,7 +28,6 @@ api.post('/respostas', (req, resp) => {
     respostas[userId].forEach(point => {
       pontos[point] = (pontos[point] || 0) + 1;
     });
-    }
 
     let resultado = null;
     let maior = 0;
@@ -41,6 +40,7 @@ api.post('/respostas', (req, resp) => {
     }
 
     resp.json({ tipo: "resultado", conteudo: `Sua profissão ideal é: ${resultado}` });
+    }
 });
 
 api.listen(7483,() => console.log('==> > SUPER API em funcionamento!!!'));

@@ -1,0 +1,4 @@
+- [x] Corrigir a condição do if para perguntaId < perguntas.length - 1
+- [x] Corrigir proximaPergunta para perguntas[perguntaId + 1]
+- [x] Mover o cálculo do resultado e resp.json para dentro do else
+- [x] Remover o cálculo duplicado do resultado fora do if-else
